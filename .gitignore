@@ -1,4 +1,6 @@
-# Unity
+# ====================================
+# Unity generated folders and files
+# ====================================
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -8,7 +10,13 @@
 [Mm]emoryCaptures/
 sysinfo.txt
 
+# Uncomment if you don't want to track user-specific settings
+# User-specific settings (remove if collaborating with others)
+# [Uu]serSettings/
+
+# ====================================
 # Visual Studio / VS Code
+# ====================================
 .vscode/
 *.csproj
 *.unityproj
@@ -20,15 +28,30 @@ sysinfo.txt
 *.pidb
 *.booproj
 
-# OS Files
+# ====================================
+# OS-specific files
+# ====================================
 .DS_Store
 Thumbs.db
 
+# ====================================
 # JetBrains Rider
+# ====================================
 .idea/
 
-# Unity Cache
+# ====================================
+# Unity Cache and tools
+# ====================================
 /[Aa]ssets/AssetStoreTools*
 
+# ====================================
 # Unity Version Control (Plastic SCM)
+# ====================================
 .plastic/
+
+# ====================================
+# Preserve these essential folders
+# ====================================
+!Assets/
+!ProjectSettings/
+!Packages/
