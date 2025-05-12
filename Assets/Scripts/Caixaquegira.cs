@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Caixaquegira : MonoBehaviour
 {
-    public float rotationSpeed = 45f; // Graus por segundo
+    public float rotationSpeed = 45f; // Graus 
 
     void Update()
     {
-        transform.Rotate(rotationSpeed * Time.deltaTime, 0, 0);
+        transform.Rotate(rotationSpeed * Time.deltaTime, 0, 0); 
     }
 }

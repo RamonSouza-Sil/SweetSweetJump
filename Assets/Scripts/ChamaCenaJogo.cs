@@ -7,7 +7,7 @@ using TMPro;
 
 public class ChamaCenaJogo : MonoBehaviour
 {
-    public string gameSceneName = "Game"; // Altere para o nome da sua cena principal
+    public string gameSceneName = "Game"; 
 
     [SerializeField] private GameObject scenerLoadUI;
     [SerializeField] private TextMeshProUGUI texto;
@@ -18,7 +18,7 @@ public class ChamaCenaJogo : MonoBehaviour
     {
         if (texto != null)
         {
-            piscarTexto = StartCoroutine(PiscarTexto());
+            piscarTexto = StartCoroutine(PiscarTexto());  //animação do texto
         }
     }
     void Update()
@@ -29,23 +29,23 @@ public class ChamaCenaJogo : MonoBehaviour
         }
     }
 
-    // Corotita para carregar a proxima cena para não haver delays
+    
     IEnumerator CarregarCenaAssincrona()
     {
-        //ativando ui de loading
+        
         if (scenerLoadUI != null)
         {
             scenerLoadUI.SetActive(true);
         }
 
-        // esconde o texto "pressione espaço"
+        
         if (texto != null)
         {
             texto.gameObject.SetActive(false);
             texto2.SetActive(true);
         }
 
-        // Começa a carregar a cena de forma assíncrona
+        
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(gameSceneName);
         asyncLoad.allowSceneActivation = false;
 
@@ -64,7 +64,7 @@ public class ChamaCenaJogo : MonoBehaviour
             loadingBar.value = 1f;
         }
 
-        // Aguarda um pouco antes de ativar a nova cena 
+        
         yield return new WaitForSeconds(0.5f);
 
         asyncLoad.allowSceneActivation = true;

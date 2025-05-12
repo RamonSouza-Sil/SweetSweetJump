@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour
 {
-    public float distancia = 5f;        // Distância até onde ele vai antes de voltar
-    public float velocidade = 2f;       // Velocidade de movimento
-    public int dano = 1;                // Dano que ele causa
+    public float distancia = 5f;        
+    public float velocidade = 2f;       
+    public int dano = 1;                
 
     private Vector3 pontoInicial;
     private Vector3 destino;
     private bool indo = true;
 
     PlayerVida PlayerVida;
-    void Start()
+    void Start() //rota
     {
         pontoInicial = transform.position;
         destino = pontoInicial + transform.forward * distancia;
@@ -24,23 +24,23 @@ public class Inimigo : MonoBehaviour
         Vector3 alvo = indo ? destino : pontoInicial;
         Vector3 direcao = (alvo - transform.position).normalized;
 
-        // Move o inimigo
+        
         transform.position += direcao * velocidade * Time.deltaTime;
 
-        // Vira na direção do movimento
+        
         if (direcao != Vector3.zero)
         {
             transform.forward = direcao;
         }
 
-        // Quando chega perto do destino, inverte o sentido
+        
         if (Vector3.Distance(transform.position, alvo) < 0.1f)
         {
             indo = !indo;
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) //detecção de colisão
     {
         Debug.Log("Colidiu com: " + other.name);
 

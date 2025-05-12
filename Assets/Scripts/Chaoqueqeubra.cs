@@ -5,25 +5,25 @@ using UnityEngine;
 public class Chaoqueqeubra : MonoBehaviour
 
 {
-    public float checkRadius = 0.6f;      // Raio de detecção do jogador
-    public float checkHeight = 1f;        // Altura onde o jogador seria detectado
-    public string playerTag = "Player";   // Tag do jogador
+    public float checkRadius = 0.6f;      
+    public float checkHeight = 1f;        
+    public string playerTag = "Player";   
 
     private bool jogadorSobre = false;
 
     void Update()
     {
-        // Posição no centro da plataforma, levemente acima
+        
         Vector3 checkPosition = transform.position + Vector3.up * checkHeight;
 
-        // Verifica se o jogador ainda está em cima usando uma esfera invisível
+        
         Collider[] hits = Physics.OverlapSphere(checkPosition, checkRadius);
 
         bool encontrouJogador = false;
 
         foreach (Collider hit in hits)
         {
-            if (hit.CompareTag(playerTag))
+            if (hit.CompareTag(playerTag)) //checar se o player encostou
             {
                 encontrouJogador = true;
                 break;
@@ -32,7 +32,7 @@ public class Chaoqueqeubra : MonoBehaviour
 
         if (jogadorSobre && !encontrouJogador)
         {
-            // O jogador saiu da plataforma -> destruir
+            
             Destroy(gameObject);
         }
 
@@ -41,7 +41,7 @@ public class Chaoqueqeubra : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        // Só para visualização no editor: mostra a área de checagem
+        
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position + Vector3.up * checkHeight, checkRadius);
     }

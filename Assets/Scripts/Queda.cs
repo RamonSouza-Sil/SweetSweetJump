@@ -8,13 +8,13 @@ public class Queda : MonoBehaviour
 
 {
     public float fallLimitY = -10f;
-    public string defeatSceneName = "Derrota"; // nome da cena de derrota
+    public string defeatSceneName = "Derrota"; 
 
     void Update()
     {
         if (transform.position.y < fallLimitY)
         {
-            SceneManager.LoadScene(defeatSceneName);
+            SceneManager.LoadScene(defeatSceneName); //Carregando cena
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class VidaUI : MonoBehaviour
 {
-    public Image[] hearts; // arraste os 3 ícones aqui
+    public Image[] hearts; 
 
     public void UpdateHearts(int currentLives)
     {

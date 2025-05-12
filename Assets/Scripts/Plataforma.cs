@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Plataforma : MonoBehaviour
 {
-    public float amplitude = 2f;       // Altura máxima do movimento
-    public float velocidade = 1f;      // Velocidade de oscilação
+    public float amplitude = 2f;       //altura
+    public float velocidade = 1f;      
 
     private Vector3 posicaoInicial;
 

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CuboqueGira : MonoBehaviour
 {
-    public float rotationSpeed = 45f; // Graus por segundo
+    public float rotationSpeed = 45f;  //velocidade
 
     void Update()
     {
-        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);  
     }
 }
 

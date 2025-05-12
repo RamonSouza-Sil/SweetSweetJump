@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro; // Adicionado para usar TextMeshPro
+using TMPro; 
 
 public class GameManager : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        // Tiramos o DontDestroyOnLoad!
+        
     }
 
     void Start()
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
         if (collected >= totalToCollect)
         {
-            SceneManager.LoadScene("Vitoria");
+            SceneManager.LoadScene("Vitoria");  //chama cena
         }
     }
 
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         if (collectText != null)
         {
-            collectText.text = "Doces Coletados: " + collected + "/" + totalToCollect;
+            collectText.text = "Doces Coletados: " + collected + "/" + totalToCollect; //contagem dos doces
         }
     }
 }
