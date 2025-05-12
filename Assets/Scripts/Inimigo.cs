@@ -12,6 +12,7 @@ public class Inimigo : MonoBehaviour
     private Vector3 destino;
     private bool indo = true;
 
+    PlayerVida PlayerVida;
     void Start()
     {
         pontoInicial = transform.position;
@@ -41,13 +42,16 @@ public class Inimigo : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Colidiu com: " + other.name);
+
         if (other.CompareTag("Player"))
         {
-            // Aqui você pode chamar algum método de dano do player
-            Debug.Log("Player levou dano!");
-
-            // Exemplo: se o player tiver um script com função LevarDano()
-            // other.GetComponent<SeuScriptDoPlayer>()?.LevarDano(dano);
+            Debug.Log("É o jogador!");
+            PlayerVida health = other.GetComponent<PlayerVida>();
+            if (health != null)
+            {
+                health.TakeDamage();
+            }
         }
     }
 }

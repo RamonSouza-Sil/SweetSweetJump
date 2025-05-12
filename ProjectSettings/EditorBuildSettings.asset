@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 14f23dbf0e92a2c43a17b173facc89cc
+  - enabled: 1
     path: Assets/Scenes/Sweet.unity
     guid: bb8e23fec3a50934b9d0f25581620ebb
   - enabled: 1
@@ -14,10 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vitoria.unity
     guid: 7e902c2caaf4caa49841a63f9309be79
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 14f23dbf0e92a2c43a17b173facc89cc
   - enabled: 0
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
