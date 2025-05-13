@@ -9,7 +9,8 @@ Sweet Sweet Jump é um jogo 3D de gênero parkuor, onde o jogador controla um fa
 - Arte 3D (Unity Asset Store)
 
 ## 🚀 Como jogar?
-O jogo será lançado no Itch.io para qualquer um poder jogar  (lembrando que o jogo atualmente está disponível apenas para PC). O Link será disponibilizado em breve!
+O jogo será lançado no Itch.io para qualquer um poder jogar  (lembrando que o jogo atualmente está disponível apenas para PC)
+[LINK DO JOGO!](https://ramonsouza.itch.io/sweet-sweet-jump)
 
 ## 🛹 Mecânicas
 - Movimentação (W, A, S, D) 
